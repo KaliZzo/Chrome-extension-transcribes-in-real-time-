@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Time Audio Transcription",
+  "version": "1.0",
+  "description": "Transcribes audio in near real-time using OpenAI's Whisper API",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["https://api.openai.com/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src https://api.openai.com/"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Real-Time Audio Transcription</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+      }
+      button {
+        margin: 5px;
+      }
+      #transcript {
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        height: 200px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Audio Transcription</h1>
+    <button id="startCapture">Start Capture</button>
+    <button id="stopCapture">Stop Capture</button>
+    <div id="status"></div>
+    <h2>Transcript:</h2>
+    <div id="transcript"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
